@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="Track Day, Track Time">
+    <meta property="og:title" content="Track Day" />
+    <meta property="og:description" content="Securely and confidentially track your time. Enter the start and end time of your task, saving your private data to your browser on your device, without sharing it with the rest of the world." />
+    <meta property="description" content="Securely and confidentially track your time. Enter the start and end time of your task, saving your private data to your browser on your device, without sharing it with the rest of the world." />
+    <meta property="og:image" content="/logo.png" />
+    <title>Track Day</title>
+    <link rel="manifest" href="/manifest.json">
+    <script type="module" crossorigin src="/assets/index-fJ7vxd3U.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-lI9HEux2.css">
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js')
+            .then(registration => console.log('Service Worker registered: ', registration.scope))
+            .catch(registrationError => console.log('Service Worker registration failed: ', registrationError));
+        });
+      }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
