@@ -2,7 +2,7 @@ const staticCacheName = 'my-pwa-v1';
 const filesToCache = [
   '/',
   '/index.html',
-  '/assets/index-B6-vN_AB.js',
+  '/assets/index-fJ7vxd3U.js',
   '/assets/index-lI9HEux2.css',
   '/favicon.ico',
   '/logo.png',
@@ -22,9 +22,6 @@ self.addEventListener('fetch', event => {
   event.respondWith(
     caches.match(event.request)
     .then(cachedResponse => {
-        console.log(caches)
-        console.log(cachedResponse);
-        console.log(event.request);
         return cachedResponse || fetch(event.request)
           .catch(() => {  // Network error handling
             if (event.request.url.endsWith('/manifest.json')) {
