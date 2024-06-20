@@ -1,8 +1,18 @@
-# React + Vite
+# Track Day
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Securely and confidentially track your time. Enter the start and end time of your task, saving your private data to your browser on your device, without sharing it with the rest of the world.
 
-Currently, two official plugins are available:
+##### Website Link: [https://trackday-web.netlify.app/](https://trackday-web.netlify.app/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+How to use:
+
+- <strong>1. Dashboard:</strong> Start a Quick Start task or enter your new task name and click "START" to start a new task. Click the red stop button on the running task banner on top of the dashboard to end a task. You will see all the task details for the present day on the dashboard.
+
+- <strong>2. Manage Quicks:</strong> Add a new tag with color (optional) or select a previously used task to add a new quick start task for the dashboard.
+
+- <strong>3. Day History:</strong> You will see all the history on this page.
+
+How to Install:
+
+- Follow this [Guide](https://trackday-web.netlify.app/download) to install on your device
