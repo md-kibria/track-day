@@ -2,13 +2,15 @@ import { Box, Link, Typography } from "@mui/material";
 
 export default function About() {
     return (
-        <Box>
-            <Typography variant="h5" py={1}>Version: 1.0.0</Typography>
-            <Typography variant="subtitle1" sx={{lineHeight: 1.5}}>Securely and confidentially track your time. Enter the start and end time of your task, saving your private data to your browser on your device, without sharing it with the rest of the world.</Typography>
+        <Box sx={{display: 'flex', flexDirection: 'column', justifyContent: 'space-between', minHeight: `calc(100vh - 100px)`}}>
+            <Box>
+                <Typography variant="h5" py={1}>Version: 1.0.0</Typography>
+                <Typography variant="subtitle1" sx={{lineHeight: 1.5}}>Securely and confidentially track your time. Enter the start and end time of your task, saving your private data to your browser on your device, without sharing it with the rest of the world.</Typography>
+            </Box>
 
-            {/* <hr /> */}
+           
 
-            <Box sx={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', my: 12, borderTop: '1px solid #aaa', py: 3}} color="gray">
+            <Box sx={{display: 'flex', flexDirection: { xs: 'column-reverse', sm: 'row' }, justifyContent: 'space-between', alignItems: 'center', borderTop: '1px solid #aaa', py: 3}} color="gray">
                 <Typography variant="subtitle1">©2024 TrackDay - <Link href="https://github.com/md-kibria" >@md-kibria</Link></Typography>
                 <Box sx={{display: 'flex', gap: 1}}>
                     <Typography variant="subtitle1" color="gray"><Link href="https://www.facebook.com/profile.php?id=100068931456915" >
