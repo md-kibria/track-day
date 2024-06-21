@@ -132,7 +132,7 @@ class Day {
         }
 
         const uniqueByTitle = tasks.filter((item, index, self) =>
-            index === self.findIndex((t) => t.title === item.title)
+            index === self.findIndex((t) => t.title.toLowerCase() === item.title.toLowerCase())
           );
 
         return uniqueByTitle;
@@ -154,7 +154,7 @@ class Day {
         };
 
         this.tags.forEach(tag => {
-            if(tag.title === title) {
+            if(tag.title.toLowerCase() === title.toLowerCase()) {
                 throw new Error('This tag already added');
             }
         })
