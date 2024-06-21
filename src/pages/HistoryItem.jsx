@@ -13,6 +13,7 @@ import formatSecondsToHHMMSS from "../utils/second-to-time";
 import { format } from "date-fns";
 import { useParams } from "react-router-dom";
 import PageTitle from "../components/PageTitle";
+import toCapitalize from "../utils/toCapitalize";
 
 
 function createData(name, time) {
@@ -37,7 +38,7 @@ export default function HistoryItem({params}) {
     let isBel = false;
 
     taskData.forEach(d => {
-      if(d.title === task.title) {
+      if(d.title.toLowerCase() === task.title.toLowerCase()) {
         isBel = true;
       }
     })
@@ -45,7 +46,7 @@ export default function HistoryItem({params}) {
     if(!isBel) {
       const newd = {title: task.title, time: 0}
       today.tasks.forEach(t => {
-        if(task.title === t.title) {
+        if(task.title.toLowerCase() === t.title.toLowerCase()) {
           newd.time = newd.time + t.time
         }
       })
@@ -102,7 +103,7 @@ export default function HistoryItem({params}) {
                       sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
                     >
                       <TableCell component="th" scope="row">
-                        {row.name}
+                        {toCapitalize(row.name)}
                       </TableCell>
                       <TableCell align="right">{formatSecondsToHHMMSS(row.time, true)}</TableCell>
                     </TableRow>

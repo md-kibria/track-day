@@ -1,6 +1,7 @@
 import React, { PureComponent, useEffect, useState } from 'react';
 import { PieChart, Pie, Sector, ResponsiveContainer } from 'recharts';
 import formatSeconds from '../utils/format-second';
+import toCapitalize from '../utils/toCapitalize';
 
 const renderActiveShape = (props) => {
     const RADIAN = Math.PI / 180;
@@ -18,7 +19,7 @@ const renderActiveShape = (props) => {
     return (
         <g>
             <text x={cx} y={cy} dy={8} textAnchor="middle" fill={fill}>
-                {payload.name}
+                {toCapitalize(payload.name)}
             </text>
             <Sector
                 cx={cx}

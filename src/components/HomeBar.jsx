@@ -13,6 +13,7 @@ import {
 import formatSecondsToHHMMSS from '../utils/second-to-time';
 import { differenceInSeconds, format } from 'date-fns';
 import getCurrentTimeInSeconds from '../utils/getCurrentTimeInSeconds';
+import toCapitalize from '../utils/toCapitalize';
 
 // let data = [];
 
@@ -21,7 +22,7 @@ const CustomTooltip = ({ active, payload, label }) => {
   if (active && payload && payload.length) {
     return (
       <div className="custom-tooltip" style={{ backgroundColor: '#fff', border: '1px solid #ccc', padding: '10px' }}>
-        <p className="label">{`${label}`}</p>
+        <p className="label">{`${toCapitalize(label)}`}</p>
         <p className="intro" style={{ color: payload[0].fill, paddingTop: 5, fontSize: 13 }}>{`Time: ${formatSecondsToHHMMSS(payload[0].payload.time[1] - payload[0].payload.time[0], true)}`}</p>
         <p className="intro" style={{ color: payload[0].fill, paddingTop: 5, fontSize: 13 }}>{`Duri: ${formatSecondsToHHMMSS(payload[0].payload.time[0])} ~ ${formatSecondsToHHMMSS(payload[0].payload.time[1])}`}</p>
       </div>
