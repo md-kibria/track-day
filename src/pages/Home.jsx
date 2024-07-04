@@ -73,6 +73,7 @@ export default function Home() {
 
       <Box sx={{ my: 3 }}>
         <Typography sx={{ my: 0.5 }} variant="subtitle1">Quick Start</Typography>
+        {tags.length==0 ? <Typography variant="caption" color="gray">No quick start task added</Typography> : ''}
         <Box sx={{ display: 'flex', gap: 1, flexWrap: 'wrap' }}>
           {tags.map(tag => (
             <Button key={tag.id} variant="outlined" color={tag.color || 'primary'} onClick={() => handleAddTask(tag.title, tag.color)}>{tag.title}</Button>
@@ -82,7 +83,7 @@ export default function Home() {
 
       <Box elevation={3} sx={{my: 2, height: 300 }}>
         {/* <Typography align="center">Task Chart</Typography> */}
-      <HomeBar day={today} />
+      <HomeBar />
       </Box>
 
 

@@ -19,7 +19,7 @@ class Task extends Day {
         let day = this.data[this.data.length - 1];
 
         if (!day || !isToday(day.date)) {
-            day = this.createNewDay(startAt); // await createDay(startAt);
+            day = this.createNewDay(startAt);
         }
 
         const task = {

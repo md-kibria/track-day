@@ -14,6 +14,7 @@ import formatSecondsToHHMMSS from '../utils/second-to-time';
 import { differenceInSeconds, format } from 'date-fns';
 import getCurrentTimeInSeconds from '../utils/getCurrentTimeInSeconds';
 import toCapitalize from '../utils/toCapitalize';
+import useTask from '../hooks/useTask';
 
 // let data = [];
 
@@ -32,8 +33,9 @@ const CustomTooltip = ({ active, payload, label }) => {
   return null;
 };
 
-export default function HomeBar({ day }) {
+export default function HomeBar() {
 
+  const {today:day} = useTask();
   const startDate = new Date(format(day.date, 'MM-dd-yyyy'));
   const [data, setData] = useState([]);
   const [refTime, setRefTime] = useState(0);

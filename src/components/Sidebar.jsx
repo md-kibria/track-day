@@ -12,7 +12,8 @@ import { Hidden, Typography, useTheme } from '@mui/material';
 import { BrowserUpdatedOutlined, Dashboard, FeedbackOutlined, HandymanOutlined, Info, InfoOutlined, SettingsOutlined, Splitscreen, SystemUpdateOutlined, TaskAlt } from '@mui/icons-material';
 import useData from '../hooks/useData';
 import { Link } from 'react-router-dom';
-
+import { grey } from '@mui/material/colors';
+import {Link as MuiLink} from "@mui/material";
 
 
 export default function Sidebar({ open, toggleDrawer }) {
@@ -161,6 +162,10 @@ export default function Sidebar({ open, toggleDrawer }) {
           </Link>
 
         </List>
+        {/* <Divider /> */}
+        <Box sx={{px: 1, py: 2}} color="gray">
+          <Typography variant="caption">©2024 TrackDay - <MuiLink color="inherit" href="https://github.com/md-kibria" >@md-kibria</MuiLink></Typography>
+        </Box>
       </Box>
     </Drawer>
   );

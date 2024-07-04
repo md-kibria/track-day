@@ -1,6 +1,7 @@
 
 import { differenceInMinutes, differenceInSeconds, isToday } from 'date-fns'
 
+const initTags = [{"id":3,"title":"YouTube","color":"error"},{"id":2,"title":"Sleep","color":"primary"},{"id":1,"title":"Study","color":"success"}];
 
 class Day {
     key = 'TASK_DATA';
@@ -25,7 +26,8 @@ class Day {
         if (tags) {
             this.tags = JSON.parse(tags);
         } else {
-            this.tags = [];
+            // this.tags = [];
+            this.tags = initTags;
             // localStorage.setItem(this.tag_key, JSON.stringify([]));
             /** SOLVED THE ReferenceError: localStorage is not defined */
             typeof window !== "undefined" ? window.localStorage.setItem(this.tag_key, JSON.stringify([])) : null
@@ -35,7 +37,7 @@ class Day {
     createNewDay(date) {
         let id = 1;
 
-        if (this.data.length > 1) {
+        if (this.data.length >= 1) {
             id = this.data[this.data.length - 1]?.id + 1;
         }
 

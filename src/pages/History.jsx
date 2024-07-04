@@ -14,9 +14,9 @@ import PageTitle from '../components/PageTitle';
 
 
 const columns = [
-  { id: 'id', label: 'Id', minWidth: 100 },
+  // { id: 'id', label: 'Id', minWidth: 100 },
   { id: 'date', label: 'Date', minWidth: 100 },
-  { id: 'tasks', label: 'Tasks', minWidth: 100 },
+  { id: 'tasks', label: 'Tasks', minWidth: 100, align: 'center' },
 ];
 
 function createData(id, date, tasks) {

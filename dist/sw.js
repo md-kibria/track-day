@@ -2,8 +2,9 @@ const staticCacheName = 'my-pwa-v1';
 const filesToCache = [
   '/',
   '/index.html',
-  '/assets/index-BN08sm6p.js',
+  '/assets/index-hAKV57JM.js',
   '/assets/index-lI9HEux2.css',
+  '/assets/roboto-cyrillic-300-normal-UX5PCucy.woff',
   '/favicon.ico',
   '/logo.png',
   '/manifest.json'
